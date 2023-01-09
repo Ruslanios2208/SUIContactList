@@ -19,21 +19,14 @@ struct Person: Identifiable {
     static func getContactList() -> [Person] {
         var persons: [Person] = []
         
-        let names = DataManager.shared.names.shuffled()
-        let surnames = DataManager.shared.surnames.shuffled()
-        let phoneNumbers = DataManager.shared.phoneNumbers.shuffled()
-        let emails = DataManager.shared.emails.shuffled()
+        let names = DataStore.shared.names.shuffled()
+        let surnames = DataStore.shared.surnames.shuffled()
+        let phoneNumbers = DataStore.shared.phoneNumbers.shuffled()
+        let emails = DataStore.shared.emails.shuffled()
         
-        let iterationCount = min(
-            names.count,
-            surnames.count,
-            phoneNumbers.count,
-            emails.count
-        )
-        
-        for index in 0..<iterationCount {
+        for index in 0..<names.count {
             let person = Person(
-                id: index,
+                id: index + 1,
                 name: names[index],
                 surname: surnames[index],
                 phoneNumber: phoneNumbers[index],
@@ -42,21 +35,6 @@ struct Person: Identifiable {
             persons.append(person)
         }
         return persons
-    }
-    
-    static func getPerson() -> Person {
-        let name = DataManager.shared.names.shuffled()
-        let surname = DataManager.shared.surnames.shuffled()
-        let phoneNumber = DataManager.shared.phoneNumbers.shuffled()
-        let email = DataManager.shared.emails.shuffled()
-        
-        return Person(
-            id: 0,
-            name: name.first ?? "",
-            surname: surname.first ?? "",
-            phoneNumber: phoneNumber.first ?? "",
-            email: email.first ?? ""
-        )
     }
 }
 

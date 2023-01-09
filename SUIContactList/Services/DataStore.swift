@@ -1,15 +1,13 @@
 //
-//  DataManager.swift
+//  DataStore.swift
 //  SUIContactList
 //
 //  Created by Руслан Шигапов on 24.12.2022.
 //
 
-class DataManager {
-    static let shared = DataManager()
+class DataStore {
+    static let shared = DataStore()
     
-    private init() {}
-
     let names = ["John", "Sharon", "Aaron", "Steven", "Nicola", "Ted"]
     
     let surnames = ["Snow", "Stone", "Paul", "King", "Tesla", "Williams"]
@@ -24,4 +22,6 @@ class DataManager {
         "eeee@gmail.com",
         "ffff@gmail.com"
     ]
+    
+    private init() {}
 }

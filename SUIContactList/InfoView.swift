@@ -17,18 +17,11 @@ struct InfoView: View {
                 Image(systemName: "person.fill")
                     .resizable()
                     .frame(width: 100, height: 100)
+                    .padding()
                 Spacer()
             }
-            HStack {
-                Image(systemName: "phone")
-                    .foregroundColor(.blue)
-                Text(person.phoneNumber)
-            }
-            HStack {
-                Image(systemName: "tray")
-                    .foregroundColor(.blue)
-                Text(person.email)
-            }
+            Label(person.phoneNumber, systemImage: "phone")
+            Label(person.email, systemImage: "tray")
         }
         .navigationTitle(person.fullName)
     }
@@ -36,6 +29,6 @@ struct InfoView: View {
 
 struct InfoView_Previews: PreviewProvider {
     static var previews: some View {
-        InfoView(person: Person.getPerson())
+        InfoView(person: Person.getContactList().first!)
     }
 }

@@ -14,7 +14,7 @@
 		E46397642957554B001AFA75 /* PersonsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E46397632957554B001AFA75 /* PersonsListView.swift */; };
 		E46397662957558A001AFA75 /* DetailedListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E46397652957558A001AFA75 /* DetailedListView.swift */; };
 		E4639768295757FD001AFA75 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4639767295757FD001AFA75 /* Person.swift */; };
-		E463976A29575856001AFA75 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E463976929575856001AFA75 /* DataManager.swift */; };
+		E463976A29575856001AFA75 /* DataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = E463976929575856001AFA75 /* DataStore.swift */; };
 		E463976E29576185001AFA75 /* InfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E463976D29576185001AFA75 /* InfoView.swift */; };
 /* End PBXBuildFile section */
 
@@ -27,7 +27,7 @@
 		E46397632957554B001AFA75 /* PersonsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonsListView.swift; sourceTree = "<group>"; };
 		E46397652957558A001AFA75 /* DetailedListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailedListView.swift; sourceTree = "<group>"; };
 		E4639767295757FD001AFA75 /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
-		E463976929575856001AFA75 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		E463976929575856001AFA75 /* DataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStore.swift; sourceTree = "<group>"; };
 		E463976D29576185001AFA75 /* InfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -93,7 +93,7 @@
 		E463977029576E26001AFA75 /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				E463976929575856001AFA75 /* DataManager.swift */,
+				E463976929575856001AFA75 /* DataStore.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -169,7 +169,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E4639768295757FD001AFA75 /* Person.swift in Sources */,
-				E463976A29575856001AFA75 /* DataManager.swift in Sources */,
+				E463976A29575856001AFA75 /* DataStore.swift in Sources */,
 				E46397662957558A001AFA75 /* DetailedListView.swift in Sources */,
 				E46397582957534B001AFA75 /* ContentView.swift in Sources */,
 				E46397642957554B001AFA75 /* PersonsListView.swift in Sources */,

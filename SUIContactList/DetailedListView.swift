@@ -11,21 +11,16 @@ struct DetailedListView: View {
     let persons: [Person]
     
     var body: some View {
-        List(persons) { person in
-            Section(person.fullName) {
-                HStack {
-                    Image(systemName: "phone")
-                        .foregroundColor(.blue)
-                    Text(person.phoneNumber)
-                }
-                HStack {
-                    Image(systemName: "tray")
-                        .foregroundColor(.blue)
-                    Text(person.email)
+        NavigationStack {
+            List(persons) { person in
+                Section(header: Text(person.fullName).font(.headline)) {
+                    Label(person.phoneNumber, systemImage: "phone")
+                    Label(person.email, systemImage: "tray")
                 }
             }
+            .listStyle(.plain)
+            .navigationTitle("Contact List")
         }
-        .listStyle(.plain)
     }
 }
 
